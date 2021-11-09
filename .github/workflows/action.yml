@@ -4,23 +4,19 @@ author: 'Mitsuha'
 on:
   push:
   schdule:
-    - cron '0 21 * * *'
-
+    - cron: '0 21 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: 'Check out repository'
         uses: actions/checkout@v2
-      
       - name: 'Set up python'
         uses: actions/setup-python@v2
         with:
           python-version: '3.7'
-
       - name: 'Install requirements'
         run: 'python -m pip install --upgrade pip && pip install requirements.txt'
-        
       - name: 'Run action'
         env: 
           HTTP_PROXY: ${{secrets.HTTP_PROXY}}
