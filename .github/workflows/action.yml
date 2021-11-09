@@ -3,7 +3,7 @@ description: 'Linkhub 每日签到获得流量'
 author: 'Mitsuha'
 on:
   push:
-  schdule:
+  schedule:
     - cron: '0 21 * * *'
 jobs:
   build:
