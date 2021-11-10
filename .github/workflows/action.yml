@@ -1,6 +1,4 @@
 name: 'Linkhub check-in'
-description: 'Linkhub 每日签到获得流量'
-author: 'Mitsuha'
 on:
   push:
   schedule:
